@@ -25,6 +25,18 @@ rm -rf %buildroot
 
 %find_lang %name
 
+mkdir -p %buildroot%_datadir/applications
+cat > %buildroot%_datadir/applications/mandriva-%name.desktop <<EOF
+Name=NtEd
+Comment=A new musical score editor for Linux
+Exec=nted
+Icon=sound_section
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Audio;AudioVideo;
+EOF
+
 %clean
 rm -rf %buildroot
 
@@ -34,3 +46,10 @@ rm -rf %buildroot
 %{_bindir}/*
 %{_datadir}/%name
 %{_mandir}/man1/*
+%{_datadir}/applications/*.desktop
+
+%post
+%update_menus
+
+%postun
+%clean_menus
