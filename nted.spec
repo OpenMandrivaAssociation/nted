@@ -5,6 +5,7 @@ Summary: A new musical score editor for Linux
 License: GPLv2+
 URL: http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/nted.xhtml
 Group: Graphical desktop/GNOME
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source: http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/%name-%version.tgz
 BuildRequires: gtk+2-devel
 BuildRequires: libalsa-devel
