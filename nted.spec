@@ -10,6 +10,7 @@ Source: http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/%name-%version.tgz
 Patch0: http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/slur_patch-0.22.3.patch
 BuildRequires: gtk+2-devel
 BuildRequires: libalsa-devel
+BuildRequires: yelp kdesdk-po2xml
 
 %description
 NtEd is a new musical score editor for Linux.
