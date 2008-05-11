@@ -1,6 +1,6 @@
 Name: nted
 Version: 0.22.3
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: A new musical score editor for Linux
 License: GPLv2+
 URL: http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/nted.xhtml
@@ -31,6 +31,7 @@ rm -rf %buildroot
 
 mkdir -p %buildroot%_datadir/applications
 cat > %buildroot%_datadir/applications/mandriva-%name.desktop <<EOF
+[Desktop Entry]
 Name=NtEd
 Comment=A new musical score editor for Linux
 Exec=nted
@@ -38,7 +39,7 @@ Icon=sound_section
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=Audio;AudioVideo;
+Categories=Audio;AudioVideo;GTK;
 EOF
 
 %clean
