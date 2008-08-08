@@ -1,6 +1,6 @@
 Name: nted
 Version: 0.22.3
-Release: %mkrel 2
+Release: %mkrel 3
 Summary: A new musical score editor for Linux
 License: GPLv2+
 URL: http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/nted.xhtml
