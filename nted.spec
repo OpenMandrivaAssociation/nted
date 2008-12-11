@@ -1,13 +1,12 @@
 Name: nted
-Version: 0.22.3
-Release: %mkrel 3
+Version: 1.4.17
+Release: %mkrel 1
 Summary: A new musical score editor for Linux
 License: GPLv2+
 URL: http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/nted.xhtml
 Group: Graphical desktop/GNOME
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Source: http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/%name-%version.tgz
-Patch0: http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/slur_patch-0.22.3.patch
+Source: http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/%name-%version.tar.gz
 BuildRequires: gtk+2-devel
 BuildRequires: libalsa-devel
 BuildRequires: yelp kdesdk-po2xml
@@ -17,7 +16,6 @@ NtEd is a new musical score editor for Linux.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %configure2_5x
@@ -52,6 +50,7 @@ rm -rf %buildroot
 %{_datadir}/%name
 %{_mandir}/man1/*
 %{_datadir}/applications/*.desktop
+%{_datadir}/pixmaps/nted.png
 
 %if %mdkversion < 200900
 %post
