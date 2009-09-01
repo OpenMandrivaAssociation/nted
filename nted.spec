@@ -1,5 +1,5 @@
 Name: nted
-Version: 1.6.4
+Version: 1.6.5
 Release: %mkrel 1
 Summary: A new musical score editor for Linux
 License: GPLv2+
