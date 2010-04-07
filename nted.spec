@@ -1,6 +1,6 @@
 Name:		nted
 Version:	1.9.22
-Release:	%mkrel 1
+Release:	%mkrel 2
 Summary:	A new musical score editor for Linux
 License:	GPLv2+
 URL:		http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/nted.xhtml
@@ -23,15 +23,12 @@ NtEd is a new musical score editor for Linux.
 %patch1 -p1 -b .strfmt
 
 %build
-%configure2_5x --docdir=%_datadir/docs
+%configure2_5x 
 %make
 
 %install
 rm -rf %buildroot
 %makeinstall_std
-
-mv %buildroot%_datadir/docs .
-
 %find_lang %name
 
 %clean
@@ -40,10 +37,8 @@ rm -rf %buildroot
 %files -f %name.lang
 %defattr(-,root,root)
 %doc ABOUT_THE_EXAMPLES.TXT AUTHORS FAQ
-%doc docs/*
 %{_bindir}/*
 %{_datadir}/%name
 %{_mandir}/man1/*
 %{_datadir}/applications/*.desktop
 %{_datadir}/pixmaps/nted.png
-
