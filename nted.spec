@@ -7,8 +7,8 @@ URL:		http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/nted.xhtml
 Group:		Graphical desktop/GNOME
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source:		http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/sources/%{name}-%{version}.tar.gz
-Patch0:		nted-1.9.22-fix-desktop.patch
-Patch1:		nted-1.9.22-fix-str-fmt.patch
+Patch0:		nted-1.10.1-fix-desktop.patch
+Patch1:		nted-1.10.1-fix-str-fmt.patch
 BuildRequires:	gtk+2-devel
 BuildRequires:	libalsa-devel
 BuildRequires:	yelp kdesdk4-po2xml xmlto
