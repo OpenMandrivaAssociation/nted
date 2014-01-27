@@ -1,6 +1,7 @@
---- nted-1.9.18/chordorrest.cpp.str	2010-02-03 12:17:32.000000000 +0100
-+++ nted-1.9.18/chordorrest.cpp	2010-02-03 12:18:23.000000000 +0100
-@@ -3672,7 +3672,7 @@
+diff -urN nted-1.10.18/chordorrest.cpp nted-1.10.18-patched/chordorrest.cpp
+--- nted-1.10.18/chordorrest.cpp	2011-01-27 23:09:44.000000000 +1000
++++ nted-1.10.18-patched/chordorrest.cpp	2014-01-27 19:42:03.000000000 +1100
+@@ -3794,7 +3794,7 @@
  					strcat(Str, " ");
  					len2 = NedResource::getPartLength(&dotcount);
  				}
@@ -9,7 +10,7 @@
  				*midi_len = 0;
  			}
  			else {
-@@ -3706,7 +3706,7 @@
+@@ -3839,7 +3839,7 @@
  				force_length = true;
  			}
  			if (force_length) {
@@ -18,7 +19,7 @@
  			}
  			exportLilyAccents(fp);
  			if (keep_beams && m_beam) {
-@@ -4013,7 +4013,7 @@
+@@ -4153,7 +4153,7 @@
  			strcat(Str, " ");
  			len2 = NedResource::getPartLength(&dotcount);
  		}
@@ -27,7 +28,7 @@
  		*midi_len = 0;
  	}
  	else {
-@@ -4070,7 +4070,7 @@
+@@ -4210,7 +4210,7 @@
  			strcat(Str, " ");
  			len2 = NedResource::getPartLength(&dotcount);
  		}
@@ -36,8 +37,9 @@
  		*midi_len = 0;
  	}
  	else {
---- nted-1.9.18/chords/chordpainter.cpp.str	2010-02-03 12:15:40.000000000 +0100
-+++ nted-1.9.18/chords/chordpainter.cpp	2010-02-03 12:15:51.000000000 +0100
+diff -urN nted-1.10.18/chords/chordpainter.cpp nted-1.10.18-patched/chords/chordpainter.cpp
+--- nted-1.10.18/chords/chordpainter.cpp	2011-01-27 23:09:28.000000000 +1000
++++ nted-1.10.18-patched/chords/chordpainter.cpp	2014-01-27 19:38:26.000000000 +1100
 @@ -461,7 +461,7 @@
  		for (i = 0; i < dotcount; i++) {
  			strcat(Str, ".");
@@ -47,9 +49,10 @@
  	}
  	*midi_len = duration;
  	if (mody_name[0] != '\0') {
---- nted-1.9.18/mainwindow.cpp.str	2010-02-03 12:16:09.000000000 +0100
-+++ nted-1.9.18/mainwindow.cpp	2010-02-03 12:16:29.000000000 +0100
-@@ -3832,8 +3832,8 @@
+diff -urN nted-1.10.18/mainwindow.cpp nted-1.10.18-patched/mainwindow.cpp
+--- nted-1.10.18/mainwindow.cpp	2011-01-27 23:09:44.000000000 +1000
++++ nted-1.10.18-patched/mainwindow.cpp	2014-01-27 19:42:41.000000000 +1100
+@@ -3902,8 +3902,8 @@
  		if (m_staff_contexts[i].m_staff_short_name != NULL && strlen(m_staff_contexts[i].m_staff_short_name->getText()) > 0) {
  			fprintf(fp, " \\set Staff.shortInstrumentName = \"%s \"", m_staff_contexts[i].m_staff_short_name->getText());
  		}
@@ -60,9 +63,10 @@
  		fprintf(fp, " \\time %d/%d", m_numerator, m_denominator);
  		if (m_upbeat_inverse != 0) {
  			fprintf(fp, " \\partial 64*%d", partial);
---- nted-1.9.18/resource.cpp.str	2010-02-03 12:16:51.000000000 +0100
-+++ nted-1.9.18/resource.cpp	2010-02-03 12:17:01.000000000 +0100
-@@ -3783,7 +3783,7 @@
+diff -urN nted-1.10.18/resource.cpp nted-1.10.18-patched/resource.cpp
+--- nted-1.10.18/resource.cpp	2011-01-27 23:09:44.000000000 +1000
++++ nted-1.10.18-patched/resource.cpp	2014-01-27 19:43:10.000000000 +1100
+@@ -3930,7 +3930,7 @@
  		for (i = 0; i < dotcount; i++) {
  			strcat(Str, ".");
  		}

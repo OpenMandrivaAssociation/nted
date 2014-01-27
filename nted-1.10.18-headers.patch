@@ -1,0 +1,11 @@
+diff -urN nted-1.10.18/dynarray.h nted-1.10.18-patched/dynarray.h
+--- nted-1.10.18/dynarray.h	2011-01-27 23:09:44.000000000 +1000
++++ nted-1.10.18-patched/dynarray.h	2014-01-27 19:44:59.000000000 +1100
+@@ -34,6 +34,7 @@
+ #define DELAULT_LEN 10
+ #define SEG_LEN 10
+ 
++#include <cstring>
+ 
+ template <typename T>
+ class NedDynArray {
