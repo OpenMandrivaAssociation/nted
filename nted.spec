@@ -1,7 +1,7 @@
 Summary:	Musical score editor
 Name:		nted
 Version:	1.10.18
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Sound
 Url:		http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/nted.xhtml
