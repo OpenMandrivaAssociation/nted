@@ -4,7 +4,7 @@ Version:	1.10.18
 Release:	2
 License:	GPLv2+
 Group:		Sound
-Url:		http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/nted.xhtml
+Url:		https://vsr.informatik.tu-chemnitz.de/staff/jan/nted/nted.xhtml
 Source0:	http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/sources/%{name}-%{version}.tar.gz
 Patch0:		nted-1.10.18-sfmt.patch
 Patch1:		nted-1.10.18-headers.patch
