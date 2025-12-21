@@ -8,6 +8,11 @@ Url:		https://vsr.informatik.tu-chemnitz.de/staff/jan/nted/nted.xhtml
 Source0:	http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/sources/%{name}-%{version}.tar.gz
 Patch0:		nted-1.10.18-sfmt.patch
 Patch1:		nted-1.10.18-headers.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:	pkgconfig(cairo)
